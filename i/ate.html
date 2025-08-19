@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcade Pickup</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        select, input {
+            padding: 8px;
+            margin: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(57, 57, 57);
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        @keyframes mymove {
+            0%   {top: 0px;
+            }
+            25%  {top: 200px;
+            }
+            50%  {top: 100px;
+            }
+            75%  {top: 200px;
+            }
+            100% {top: 0px;
+            }
+        }
+        #btn{
+            background-color: white;
+            border-radius: 30px;
+            padding: 30px;
+            width: 385px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Where should we have your <br> motorcade meet you?</h1>
+        <br>
+        <a>
+        <label for="Pickup" class="pickup">Pickup Location</label><br>
+        <input type="text" id="pickup" placeholder="Pickup Location">
+        </a>
+        <br><br>
+
+        <a>
+        <label for="date" id="date">Pickup Date</label><br>
+            <select id="date" name="date">
+                <option value="today">Today</option>
+                <option value="saturday">Saturday</option>
+                <option value="sunday">Sunday</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+            </select>
+        </a>
+        <br><br>
+        <a>
+        <label for="time">Pickup Time</label><br>
+        <select id="time" name="time">
+            <option>08:00</option>
+            <option>08:15</option>
+            <option>08:30</option>
+            <option>08:45</option>
+            <option>09:00</option>
+            <option>09:15</option>
+            <option>09:30</option>
+            <option>09:45</option>
+            <option>10:00</option>
+            <option>10:15</option>
+            <option>10:30</option>
+            <option>10:45</option>
+            <option>11:00</option>
+            <option>11:15</option>
+            <option>11:30</option>
+            <option>11:45</option>
+            <option>12:00</option>
+            <option>12:15</option>
+            <option>12:30</option>
+            <option>12:45</option>
+            <option>13:00</option>
+            <option>13:15</option>
+            <option>13:30</option>
+            <option>13:45</option>
+            <option>14:00</option>
+            <option>14:15</option>
+            <option>14:30</option>
+            <option>14:45</option>
+            <option>15:00</option>
+            <option>15:15</option>
+            <option>15:30</option>
+            <option>15:45</option>
+            <option>16:00</option>
+            <option>16:15</option>
+            <option>16:30</option>
+            <option>16:45</option>
+            <option>17:00</option>
+            <option>17:15</option>
+            <option>17:30</option>
+            <option>17:45</option>
+            <option>18:00</option>
+            <option>18:15</option>
+            <option>18:30</option>
+            <option>18:45</option>
+            <option>19:00</option>
+            <option>19:15</option>
+            <option>19:30</option>
+            <option>19:45</option>
+            <option>20:00</option>
+            <option>20:15</option>
+            <option>20:30</option>
+            <option>20:45</option>
+            <option>21:00</option>
+            <option>21:15</option>
+            <option>21:30</option>
+            <option>21:45</option>
+            <option>22:00</option>
+            <option>22:15</option>
+            <option>22:30</option>
+            <option>22:45</option>
+            <option>23:00</option>
+            <option>23:15</option>
+            <option>23:30</option>
+            <option>23:45</option>
+        </select>
+        </a>
+
+
+        <br><br>
+
+
+        <label for="duration">Duration of Protection</label><br>
+        <select id="duration" name="duration">
+            <option>5 hours</option>
+            <option>6 hours</option>
+            <option>7 hours</option>
+            <option>8 hours</option>
+            <option>9 hours</option>
+            <option>10 hours</option>
+            <option>11 hours</option>
+            <option>12 hours</option>
+            <option>13 hours</option>
+            <option>14 hours</option>
+            <option>15 hours</option>
+            <option>16 hours</option>
+            <option>17 hours</option>
+            <option>18 hours</option>
+            <option>19 hours</option>
+            <option>20 hours</option>
+            <option>21 hours</option>
+            <option>22 hours</option>
+            <option>23 hours</option>
+            <option>24 hours</option>
+        </select>
+        <br><br><br><br>
+        <button id="btn" onclick="onclick(window.location.href='./finalpage.html')">Next</button>
+    </center>
+</body>
+</html>

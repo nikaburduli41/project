@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #next{
+        background-color: white;
+        color: black;
+        border-radius: 30px;
+        border: none;
+        padding: 15px;
+        padding-left: 150px;
+        padding-right: 150px;
+        
+    }
+    
+    input{
+        width: 300px;
+        border: none;
+        border-radius: 30px;
+        background-color: rgb(50, 50, 50);
+        color: gray;
+        padding: 10px;
+    }
+    select{
+        padding: 8px;
+        margin: 5px;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        background-color: rgb(57, 57, 57);
+        padding-left: 10px;
+        padding-right: 10px;
+        color: white;
+    }
+    p{
+        color: rgb(73, 73, 73);
+
+    }
+    h2{
+        color: white;
+
+    }
+    @keyframes mymove {
+    0%   {top: 0px;
+    }
+    25%  {top: 200px;
+    }
+    50%  {top: 100px;
+    }
+    75%  {top: 200px;
+    }
+    100% {top: 0px;
+    }
+}
+</style>
+    <body>
+        <center>
+        <h2>What's your <br> phone number?</h2>
+        <p>A verification code will be sent to this number</p><br>
+        <select id="country-code" name="country-code">
+            <option value="us">US +1</option>
+            <option value="ca">CA +1</option>
+            <option value="gb">GB +44</option>
+            <option value="au">AU +61</option>
+            <option value="in">IN +91</option>
+            <option value="cn">CN +86</option>
+            <option value="jp">JP +81</option>
+            <option value="de">DE +49</option>
+            <option value="fr">FR +33</option>
+            <option value="it">IT +39</option>
+            <option value="br">BR +55</option>
+            <option value="ru">RU +7</option>
+            <option value="mx">MX +52</option>
+            <option value="za">ZA +27</option>
+            <option value="kr">KR +82</option>
+            <option value="es">ES +34</option>
+            <option value="ar">AR +54</option>
+            <option value="pl">PL +48</option>
+            <option value="ge">GE +995</option>
+        </select>
+        <input type="number" placeholder="Phone number">
+        <br><br><br><br>
+        <p>By continuing you acknowlege and agree to <br> Privacy Policy and Terms of Use</p>
+        <br>
+        <button id="next">Next</button>
+        </center>
+
+    </body>
+</html>

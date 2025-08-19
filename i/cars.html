@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        p{
+            color: rgb(46, 44, 44);
+        }
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        #btn{
+            background-color: white;
+            border-radius: 30px;
+            padding: 30px;
+            width: 385px;
+            height: 40px;
+        }
+        @keyframes mymove {
+            0%   {top: 0px;
+            }
+            25%  {top: 200px;
+            }
+            50%  {top: 100px;
+            }
+            75%  {top: 200px;
+            }
+            100% {top: 0px;
+            }
+        }
+        #nextt{
+            margin-right: 50px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 50px;
+        }
+        #prevv{
+            margin-left: 50px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-right: 50px;
+        }
+        a{
+            background-color: rgb(29, 29, 29);
+            padding-right: 50px;
+            padding-left: 50px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            border-radius: 30px;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+    <img src="./images/1car.png" id="carsr" width="400px">
+    <p>Escaoade or Similar Veichle Fits 5 Protectees</p>
+    <h2>How many cars do you want in <br> your motorcade?</h2>
+    <p>Each car comes with a dedicated drivers for the <br> duration of your protection. based on your booking <br> detail. you will require 1 car</p>
+    <br><br>
+    <a>
+        <button id="prevv" onclick="preev()"> - </button>
+        <span id="oppp">1</span>
+        <button id="nextt" onclick="nextt()"> + </button> 
+    </a>
+
+    <br><br><br>
+    <button id="btn" onclick="window.location.href='./ate.html'">Next</button>
+    </center>
+
+    <script>
+        const spao = document.getElementById("oppp")
+        const cart = document.getElementById("carsr")
+        let car = 0;
+        const cars = [
+            './images/2car.png', 
+            './images/3car.png',
+            './images/1car.png'
+        ]
+        const texts = [
+            '2',
+            '3',
+            '1'
+        ]
+        function preev() {
+            car--;
+            if (car < 0) car = cars.length - 1;
+            im(car);
+        }
+
+        function nextt() {
+            car++;
+            if (car >= cars.length){
+            car = 0;
+        }
+            im(car);
+        }
+
+        function im(index) {
+            cart.src = cars[index];
+            spao.textContent = texts[index];
+        }
+
+
+    </script>
+</body>
+</html>

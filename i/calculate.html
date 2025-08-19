@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./cssonlycal.css">
+</head>
+
+<body>
+    <div id="cal">
+        <input type="text" readonly id="result">
+
+        <div id="btn">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('500')">1 protector</button>
+            <button onclick="display('1000')">2 Protector</button>
+            <button onclick="display('1500')">3 Protector</button>
+            <button onclick="display('2000')">4 protector</button>
+            <button onclick="display('2500')">5 Protector</button>
+            <button onclick="display('3000')">6 Protector</button>
+            <button onclick="display('500')">1 Protectees</button>
+            <button onclick="display('450')">2 Protectees</button>
+            <button onclick="display('400')">3 Protectees</button>
+            <button onclick="display('350')">4 Protectees</button>
+            <button onclick="display('300')">5 Protectees</button>
+            <button onclick="display('250')">6 Protectees</button>
+            <button onclick="display('350')">1 car</button>
+            <button onclick="display('700')">2 car</button>            
+            <button onclick="display('1000')">3 car</button>
+            <button onclick="calculate()" id="ca">Calculate</button>
+
+        </div>
+    </div>
+
+    <script>
+        const result = document.getElementById("result")
+
+        function display(input){
+            result.value += input
+        }
+
+        function clearDisplay(){
+            result.value = ""
+        }
+
+        function calculate(){
+ 
+
+            alert(`total is $${result.value = eval(result.value)}`)
+        }
+
+    </script>
+</body>
+</html>

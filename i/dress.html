@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #prev{
+        margin-right: 50px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #next{
+        margin-left: 50px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    a{
+        background-color: rgb(29, 29, 29);
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        border-radius: 30px;
+        color: white;
+    }   
+    #btn{
+        background-color: white;
+        border-radius: 30px;
+        padding: 30px;
+        width: 350px;
+        height: 40px;
+    }
+    body {
+        background-color: black;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    @keyframes mymove {
+        0%   {top: 0px;
+        }
+        25%  {top: 200px;
+        }
+        50%  {top: 100px;
+        }
+        75%  {top: 200px;
+        }
+        100% {top: 0px;
+        }
+}
+    h3{
+        margin-right: 225px;
+    }
+    h4{
+        color:rgb(35, 35, 35);
+    }
+</style>
+<body>
+    <center>
+    <img id="img2" src="./images/IMG_4823.png" width="400px">
+    <br><br><br>
+    <h3>Pick Dress Code</h3>
+    <h4>Protectors tailor their uniform for any occasions</h4>
+    <a>
+        <button id="prev" onclick="pra()"> < </button>
+        <span id="dddd">outfit 1 </span>
+        <button id="next" onclick="net()"> > </button> 
+    </a>
+
+    <br><br><br>
+    <button id="btn" onclick="window.location.href='./cars.html'">next</button>
+    </center>
+
+<script>
+    const img2 = document.getElementById("img2");
+    const sp = document.getElementById("dddd");
+
+    const imgs = [ 
+        './images/IMG_4823.png', 
+        './images/img2.png',  
+        './images/img3.png'  
+    ];
+
+    const names = [
+        "outfit 1",
+        "outfit 2",
+        "outfit 3"
+    ];
+
+    let dress = 0;
+
+    function pra() {
+        dress--;
+        if (dress < 0) dress = imgs.length - 1;
+        imgshow(dress);
+    }
+
+    function net() {
+        dress++;
+        if (dress >= imgs.length){
+            dress = 0;
+        }
+        imgshow(dress);
+    }
+
+    function imgshow(index) {
+        img2.src = imgs[index];
+        sp.textContent = names[index];
+    }
+
+
+</script>
+</body>
+</html>

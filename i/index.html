@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protector</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        transition: 3s;
+    }
+    body:hover #entrance {
+        width: 300px;
+        transition: width 3s ;
+    }
+    body:hover #ww {
+        font-size: 50px;
+        transition: font-size 3s;
+    }
+    #ww{
+        font-size: 0px;
+    }
+
+    @keyframes mymove {
+    0%   {top: 0px;
+    }
+    25%  {top: 200px;
+    }
+    50%  {top: 100px;
+    }
+    75%  {top: 200px;
+    }
+    100% {top: 0px;
+    }
+}
+</style>
+<body>
+    <center>
+        <br><br><br><br><br><br><br><br><br><br>
+        <img src="./images/Protector_2_Logo.jpg" id="entrance" width="0px" onclick="window.location.href='./main1.html'"> 
+        <h1 id="ww">Protector</h1>   
+    </center>
+
+</body>
+</html>

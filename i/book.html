@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #fy{
+        margin-right: 50px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #fg{
+        margin-left: 50px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    h6{
+        color: rgba(255, 255, 255, 0.286);
+    }
+    body{
+        background-color: black;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #ff{
+        margin-right: 50px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #ft{
+        margin-left: 50px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    a{
+        background-color: rgb(29, 29, 29);
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        border-radius: 30px;
+
+    }
+    #dd{
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 30px;
+        padding: 15px;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    @keyframes mymove {
+    0%   {top: 0px;
+    }
+    25%  {top: 200px;
+    }
+    50%  {top: 100px;
+    }
+    75%  {top: 200px;
+    }
+    100% {top: 0px;
+    }
+}
+</style>
+<body>
+    <center>
+        <h2>How many Protectees?</h2>
+        <h6>Let us know how many people need protection, <br> whether you're solo or in a group</h6>
+        <a>
+            <button id="ff" onclick="p()">-</button>
+            <span id="dfd">Just Me</span>
+            <button id="ft" onclick="n()">+</button> 
+        </a>
+        <h2>How many Protectors?</h2>
+        <h6>Based on the number of Protectees, we recommend <br> assigning 1 Protector to oversee your detail</h6>
+        <a>
+            <button id="fy" onclick="pp()">-</button>
+            <span id="df">1 Protector</span>
+            <button id="fg" onclick="nn()">+</button> 
+        </a>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <button id="dd" onclick="window.location.href='./dress.html'">Next</button>
+    </center>
+<script>
+
+    const names = [
+            "Just Me",
+            "2 Protectees",
+            "3 Protectees",
+            "4 Protectees",
+            "5 Protectees",
+            "6 Protectees"
+        ];
+        let a = 0;
+        const prot = document.getElementById("dfd");
+
+        function uu() {
+            prot.textContent = names[a];
+        }
+
+        function p() {
+            a--;
+            if (a < 0) {
+                a = names.length - 1;
+            }
+            uu();
+        }
+
+        function n() {
+            a++;
+            if (a >= names.length) {
+                a = 0;
+            }
+            uu();
+        }
+
+
+const name1 = [
+    "1 Protector",
+    "2 Protectors",
+    "3 Protectors",
+    "4 Protectors",
+    "5 Protectors",
+    "6 Protectors"
+];
+let aa = 0;
+const pr = document.getElementById("df");
+
+function uuu() {
+    pr.textContent = name1[aa];
+}
+
+function pp() {
+    aa--;
+    if (aa < 0) {
+        aa = name1.length - 1;
+    }
+    uuu();
+}
+
+function nn() {
+    aa++;
+    if (aa >= name1.length) {
+        aa = 0;
+    }
+    uuu();
+}
+
+</script>
+
+</body>
+</html>

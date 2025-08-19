@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #nn{
+        border-radius: 20px;
+        border: none;
+        background-color: white;
+        padding: 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #n{
+        border-radius: 20px;
+        border: none;
+        background-color: white;
+        padding: 10px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    body {
+        background-color: black;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #video {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+        display: block;
+        height: 500px;
+        width:1000px
+    }
+    #v{
+        background-color: white;
+        color: black;
+        border-radius: 30px;
+        border: none;
+        width: 300px;
+        height: 50px;
+    }
+    #gg{
+        margin-left: 50px;
+    }
+    @keyframes mymove {
+    0%   {top: 0px;
+    }
+    25%  {top: 200px;
+    }
+    50%  {top: 100px;
+    }
+    75%  {top: 200px;
+    }
+    100% {top: 0px;
+    }
+}
+    button{
+        background-color: rgb(255, 255, 255);
+        color: black;
+        border: none;
+        border-radius: 30px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+</style>
+<body>
+    <center>
+    <video src="./2B25E60E-FD66-4797-8A63-24CAF04B90EE.mp4" autoplay muted loop id="video"></video>
+    <button id="v" onclick="window.location.href='./book.html'">Book a Protector</button>     
+    <h5>Armed Protectors will be right by your <br> side, ensuring your safety</h5> 
+    <br>
+    <h5>Our Protectors are only Active duty or <br> Retired Law Encorcments and military,</h5>
+    <br>
+    <h5>Black car transportation is included <br> for safe and effortless city travel,</h5>
+    <br>
+    <h5>Meet the protectors</h5>
+
+    <img src="./images/1B576C35-A2E0-4367-87AF-E1146773E7FF.png" width="400px" id="gg"> <br>
+    <button onclick="previous()" id="nn">previous</button><button onclick="next()" id="n">next</button>
+    <br><br><br>
+    <p>want to calculate total costs of work then click button calculate</p>
+    <button onclick="window.location.href='./calculate.html'">calculate</button>
+    </center>
+    
+
+    <script>
+        const im = document.getElementById("gg");
+
+        const images = [
+            'images/0D706F22-82E9-4343-B141-AB30C124AF82.png',
+            'images/1B576C35-A2E0-4367-87AF-E1146773E7FF.png',
+            'images/4FC67AB7-3F91-4F10-93DB-31614DD7FCCE.png',
+            'images/6E52D475-D3E7-42A8-8FEB-E0C0D7A0314E.png',
+            'images/89CE4D24-C772-4425-8536-593C852D88ED.png'
+        ];
+
+        let amam = 0;
+
+        function m(w) {
+            im.src = images[w];
+        }
+
+        function previous() {
+            amam--;
+            if (amam < 0) {
+                amam = images.length - 1;
+            }
+            m(amam);
+        }
+
+        function next() {
+            amam++;
+            if (amam >= images.length) {
+                amam = 0;
+            }
+            m(amam);
+        }
+
+    </script>
+</body>
+</html>
